@@ -1,0 +1,118 @@
+.d-flex{
+    display: flex;
+}
+.d-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.d-js{
+    justify-content: space-between;
+}
+.d-ac{
+    align-items: center;
+}
+.d-jc{
+    justify-content: center;
+}
+.d-as{
+    align-items: start;
+}
+.d-ae{
+    align-items: end;
+}
+.d-jst{
+    justify-content: start;
+}
+.d-je{
+    justify-content: end;
+}
+.d-fc{
+    flex-direction: column;
+}
+.d-fcr{
+    flex-direction: column-reverse;
+}
+.d-frr{
+    flex-direction: row-reverse;
+}
+.d-fw{
+    flex-wrap: wrap;
+}
+.pos-rel{
+    position: relative;
+}
+.pos-ab{
+    position: absolute;
+}
+.tac{
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.ma{
+    margin: auto;
+}
+.max-w{
+max-width: 1100px;
+margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p,ul,li{
+    margin: 0;
+    padding: 0;
+}
+.w50{
+    width: 50%;
+}
+.w100{
+    width: 100%;
+}
+.w75{
+    width: 75%;
+}
+.w80{
+    width: 80%;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.p10{
+    padding: 10px;
+}
+.fw600{
+    font-weight: 600;
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: DM Sans;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+li{
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: Dm sans;
+    src: url(./DMSans-VariableFont_opsz\,wght.ttf);
+}
+::placeholder{
+    color: var(--colors-text, rgba(21, 20, 57, 0.40));
+font-family: DM Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 26px;
+}
+li,button:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "beta"});</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./general.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="track-container">
+        <header>
+            <div class="header d-flex max-w">
+                <div class="arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                <div class="d-flex d-js w75 ma dataCS">
+                    <h2>Data Collection</h2>
+                    <div class="toggle-container d-center">
+                        <h2 id="dataSharing">Data Sharing</h2>
+                        <div class="toggle-btn d-flex d-ac" onclick="toggleButton()">
+                            <div class="inner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container max-w d-flex">
+            <section class="sec-a">
+                <div class="polar-box">
+                    <div class="box-con d-flex d-js">
+                        <div class="polar-id d-flex">
+                            <i class="fa fa-circle" aria-hidden="true"></i>
+                            <div class="">
+                                <p class="hit">Polar ID 45HIT</p>
+                                <p class="id">Id : 87YT67UIHG7U</p>
+                            </div>
+                        </div>
+                        <div class="signal d-flex d-ae">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tracking-time">
+                    <h3>Tracking</h3>
+                    <div class="time d-flex d-js">
+                        <p>Start time</p>
+                        <p>11:96:45</p>
+                    </div>
+                    <div class="time d-flex d-js">
+                        <p>End time</p>
+                        <p>11:96:45</p>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div id="speedometer">
+                    <div class="wrapper">
+                        <div class="indicator-wrapper">
+                            <div class="indicator-wrapper-inner">
+                                <div id="indicator"></div>
+                            </div>
+                        </div>
+
+                        <div class="bar bar-1"></div>
+                        <div class="bar bar-3"></div>
+                        <div class="bar bar-4"></div>
+                    </div>
+
+                </div>
+                <div class="d-flex d-js ma w80">
+                    <div>
+                        <p class="km">10 km/h</p>
+                        <p class="mm">Min</p>
+                    </div>
+                    <div>
+                        <p class="km">50km/h</p>
+                        <p class="mm">Max</p>
+                    </div>
+                </div>
+                <div class="d-flex d-fc d-jc d-ac speed-km">
+                    <h3>
+                        Speed
+                    </h3>
+                    <h2>50 km/h</h2>
+                </div>
+                <div class="d-center mt-30">
+                    <button onclick="stopTracking()">Stop tracking</button>
+                </div>
+            </section>
+            <section class="sec-b">
+                <div class="box-bpm p10 d-flex d-ac d-js">
+                    <div class="range d-flex d-ac d-fc">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                        <div class="d-center d-js range-con">
+                            <div>
+                                <p class="fw600">28 bpm</p>
+                                <p class="mi">Min</p>
+                            </div>
+                            <div>
+                                <p class="fw600">58 bpm</p>
+                                <p class="mi">Max</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heart d-flex d-ac">
+                        <div class="heart-img">
+                            <img src="./heart.png" alt="health care">
+                        </div>
+                        <div class="heart-bpm">
+                            <h1>50</h1>
+                            <p>bpm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-avg d-flex d-js d-ac">
+                    <div class="speed-avg para25">
+                        <h4>Avg Speed</h4>
+                        <div class="s-line"></div>
+                        <h2>45</h2>
+                        <p>km/h</p>
+                    </div>
+                    <div class="heart-avg para25">
+                        <h4>Avg Heart Beat</h4>
+                        <div class="s-line"></div>
+                        <h2>38</h2>
+                        <p>Bpm</p>
+                    </div>
+                    <div class="avg-dis">
+                        <div class="avg-50">
+                            <h4>Avg Distance</h4>
+                            <h2>50<span>km</span></h2>
+                        </div>
+                        <div class="l-line"></div>
+                        <div class="duration">
+                            <h4>Duration</h4>
+                            <h2>11:09:23<span>s</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sec-c">
+<div class="map" id="map">
+</div>
+<div class="loc-btn d-center" onclick="locateme()"><p>Locate</p></div>
+            </section>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
